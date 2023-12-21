@@ -1,13 +1,16 @@
 # MARSS
 Multiband Artifact Regression in Simultaneous Slices (MARSS)
 
-This is a MATLAB pipeline developed for use in simultaneous multi-slice (multiband; MB) fMRI data. MARSS is a regression-based method that mitigates an artifactual shared signal between simultaneously acquired slices in unprocessed MB fMRI. For more information, please read (insert paper here)
+This is a MATLAB pipeline developed for use in simultaneous multi-slice (multiband; MB) fMRI data. MARSS is a regression-based method that mitigates an artifactual shared signal between simultaneously acquired slices in unprocessed MB fMRI. For more information, please read (insert paper here) <br>
+
 ------------------------------------------------------------
+Software Authors: Philip Tubiolo, John C. Williams, Mahika Gupta, and Jared X. Van Snellenberg
+
 
 Note to Users
 --------------
-This software requires SPM12 to be on the user path. SPM12 is included as part of this package. It can be obtained externally at https://www.fil.ion.ucl.ac.uk/spm/software/spm12/ .
-
+This software uses SPM12, which is included in this distribution. For more information, visit https://www.fil.ion.ucl.ac.uk/spm/software/spm12/ . <br>
+This software was developed on MATLAB R2023b and has been tested for compatibility on MATLAB R2021a.
 
 MARSS.m
 -------
