@@ -16,7 +16,9 @@ MARSS.m is the main function of this pipeline, and the only function that must b
 Syntax
 --------
 MARSS(timeseriesFile, MB, workingDir) performs MARSS artifact correction on a single unprocessed, MB fMRI timeseries. <br>
-**Input Arguments:** <br>
+
+Input Arguments
+--------------
 timeseriesFile (string): Full path to unprocessed, MB fMRI timeseries<br>
 MB (double): Multiband Acceleration Factor used during image acquisition<br>
 workingDir (string): Parent directory for all MARSS outputs. MARSS will create a separate folder within this folder named after timeseriesFile.
