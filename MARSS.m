@@ -24,6 +24,7 @@ function MARSS(timeseriesFile, MB, workingDir)
 
 % Dependencies (included with distribution):
 % subaxis (Copyright (c) 2014, Aslak Grinsted, All rights reserved.)
+% Dependencies (not included with distribution):
 % spm12 (Copyright (C) 1991,1994-2019 Wellcome Trust Centre for Neuroimaging, All rights reserved.)
 %-----------------------------------------------------------------------------
 % Philip Tubiolo, John C. Williams, Mahika Gupta, & Jared Van Snellenberg 2023
