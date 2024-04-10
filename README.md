@@ -39,7 +39,7 @@ workingDir (string): Parent directory for all MARSS outputs. MARSS will create a
 
 Outputs in workingDir
 --------------------
-**MARSS_SliceCorrelations.mat**: this .mat file contains a structure array with slice correlation information in pre- and post-MARSS data. This includes the slice correlation matrices, average correlation between simultaneously acquired slices, and average correlation between non-simultaneously acquired slices. <br>
+**MARSS_SliceCorrelations.mat**: this .mat file contains a structure array with slice correlation information in pre- and post-MARSS data. This includes the slice correlation matrices, average correlation between simultaneously acquired slices, and average correlation between adjacent slices. <br>
 **za_.nii**: this NIFTI is the MARSS corrected timeseries. <br>
 **_slcart.nii**: this NIFTI is the timeseries of MARSS-estimated artifact signal that was subtracted from timeseriesFile to produce za*.nii <br>
 **_AVGslcart.nii**: this NIFTI is the average across timepoints of slcart.nii (shown as a single 3D volume). <br>

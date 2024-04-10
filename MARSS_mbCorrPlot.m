@@ -27,7 +27,7 @@ else
 
     d = squeeze(mean(mean(nY,1),2))';
 end
-[dasimulSlicesZ,daallnonSimulSlicesZ] = MARSS_avgMBcorr(d,MB);
+[dasimulSlicesZ,daAdjacentSlicesZ] = MARSS_avgMBcorr(d,MB);
 
 if size(d,1) ~= size(MPs,1)
     if size(MPs,1) < size(d,1)
@@ -42,7 +42,7 @@ rd = zeros(size(d));
 for i = 1:size(d,2)
     rd(:,i) = d(:,i) - (X*(X\d(:,i)));
 end
-[rdasimulSlicesZ,rdaallnonSimulSlicesZ] = MARSS_avgMBcorr(rd,MB);
+[rdasimulSlicesZ,rdaAdjacentSlicesZ] = MARSS_avgMBcorr(rd,MB);
 
 
 
@@ -50,8 +50,8 @@ out.name = fname; % run name
 out.data = d; % average slice timeseries (slices * time)
 out.regdata = rd; % average slice timeseries after nuisance regression (slices * time)
 out.dasimulSlicesZ = dasimulSlicesZ;
-out.daallnonSimulSlicesZ = daallnonSimulSlicesZ;
+out.daAdjacentSlicesZ = daAdjacentSlicesZ;
 out.rdasimulSlicesZ = rdasimulSlicesZ; % avg z-transformed correlation in simultaneously acquired slices (after motion regression)
-out.rdaallnonSimulSlicesZ = rdaallnonSimulSlicesZ; % avg z-transformed correlation in ALL non-simultaneously acquired slices (after motion regression)
+out.rdaAdjacentSlicesZ = rdaAdjacentSlicesZ; % avg z-transformed correlation in adjacent slices (after motion regression)
 out.corrMat_motionRegressed = corr(rd); % slice correlation matrix after motion regression (this is the pre-MARSS correlation matrix displayed in the summary figure)
 end

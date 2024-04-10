@@ -55,8 +55,8 @@ function MARSS(timeseriesFile, MB, workingDir)
     % Generate slice correlation matrix and save in struct
     preMARSS_corrs = MARSS_mbCorrPlot(timeseriesFile,motionParams,MB);
     runStruct.preMARSS.sliceCorrelations.Z_avgSimulSliceCorr_motionRegressed = preMARSS_corrs.rdasimulSlicesZ;
-    runStruct.preMARSS.sliceCorrelations.Z_avgNonSimulSliceCorr_motionRegressed = preMARSS_corrs.rdaallnonSimulSlicesZ;
-    runStruct.preMARSS.sliceCorrelations.R_avgSliceCorrDifference = zToR(preMARSS_corrs.rdasimulSlicesZ - preMARSS_corrs.rdaallnonSimulSlicesZ);
+    runStruct.preMARSS.sliceCorrelations.Z_avgAdjacentSliceCorr_motionRegressed = preMARSS_corrs.rdaAdjacentSlicesZ;
+    runStruct.preMARSS.sliceCorrelations.R_avgSliceCorrDifference = zToR(preMARSS_corrs.rdasimulSlicesZ - preMARSS_corrs.rdaAdjacentSlicesZ);
     runStruct.preMARSS.sliceCorrelations.corrMat_motionRegressed = preMARSS_corrs.corrMat_motionRegressed;
     
     disp('Performing MARSS Procedure...'); pause(eps); drawnow;
@@ -76,8 +76,8 @@ function MARSS(timeseriesFile, MB, workingDir)
     % Generate slice correlation matrix for artifact-removed run and save in struct
     postMARSS_corrs = MARSS_mbCorrPlot(postMARSS_fname,postmotionParams,MB);
     runStruct.postMARSS.sliceCorrelations.Z_avgSimulSliceCorr_motionRegressed = postMARSS_corrs.rdasimulSlicesZ;
-    runStruct.postMARSS.sliceCorrelations.Z_avgNonSimulSliceCorr_motionRegressed = postMARSS_corrs.rdaallnonSimulSlicesZ;
-    runStruct.postMARSS.sliceCorrelations.R_avgSliceCorrDifference = zToR(postMARSS_corrs.rdasimulSlicesZ - postMARSS_corrs.rdaallnonSimulSlicesZ);
+    runStruct.postMARSS.sliceCorrelations.Z_avgAdjacentSliceCorr_motionRegressed = postMARSS_corrs.rdaAdjacentSlicesZ;
+    runStruct.postMARSS.sliceCorrelations.R_avgSliceCorrDifference = zToR(postMARSS_corrs.rdasimulSlicesZ - postMARSS_corrs.rdaAdjacentSlicesZ);
     runStruct.postMARSS.sliceCorrelations.corrMat_motionRegressed = postMARSS_corrs.corrMat_motionRegressed;
 
     % Save final struct 
