@@ -7,7 +7,8 @@ Software Authors: Philip N. Tubiolo, John C. Williams, Mahika Gupta, and Jared X
 Accompanies the following manuscript:<br>
 Philip N. Tubiolo, John C. Williams, and Jared X. Van Snellenberg.<br>
 Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br>
-bioRxiv [Preprint]. 2024 Apr 22:2023.12.25.573210. doi: 10.1101/2023.12.25.573210. PMID: 38234755; PMCID: PMC10793397.
+bioRxiv [Preprint]. 2024 Apr 22:2023.12.25.573210. doi: 10.1101/2023.12.25.573210. PMID: 38234755; PMCID: PMC10793397.<br>
+https://doi.org/10.1101%2F2023.12.25.573210
 
 Software Requirements
 --------------
@@ -45,12 +46,16 @@ Outputs in workingDir
 **MARSS_SliceCorrelations.mat**: this .mat file contains a structure array with slice correlation information in pre- and post-MARSS data. This includes the slice correlation matrices, average correlation between simultaneously acquired slices, and average correlation between adjacent slices. <br>
 **za_.nii**: this NIFTI is the MARSS corrected timeseries. <br>
 **_slcart.nii**: this NIFTI is the timeseries of MARSS-estimated artifact signal that was subtracted from timeseriesFile to produce za*.nii <br>
-**_AVGslcart.nii**: this NIFTI is the average across timepoints of slcart.nii (shown as a single 3D volume). <br>
+**_AVGslcart.nii**: this NIFTI is the mean absolute value across timepoints of slcart.nii (shown as a single 3D volume). <br>
 **MARSS_.png**: this is a summary diagnostic figure depicting pre- and post-MARSS slice correlation matrices, as well as orthogonal views of the artifact spatial distribution (from _AVGslcart.nii). <br>
 
 Citation
 ---------
-When using MARSS, please cite the following: Insert paper here <br>
+When using MARSS, please cite the following:<br>
+Philip N. Tubiolo, John C. Williams, and Jared X. Van Snellenberg.<br>
+Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br>
+bioRxiv [Preprint]. 2024 Apr 22:2023.12.25.573210. doi: 10.1101/2023.12.25.573210. PMID: 38234755; PMCID: PMC10793397.<br>
+https://doi.org/10.1101%2F2023.12.25.573210
 
 License
 ----------
