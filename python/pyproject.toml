@@ -1,6 +1,6 @@
 [project]
 name = "MARSS"
-version = "0.0.3"
+version = "0.0.4"
 description = "MARSS is a regression-based method that mitigates an artifactual shared signal between simultaneously acquired slices in unprocessed MB fMRI."
 readme = "README.md"
 requires-python = ">=3.8"

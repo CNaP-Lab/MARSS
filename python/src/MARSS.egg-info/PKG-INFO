@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: MARSS
-Version: 0.0.3
+Version: 0.0.4
 Summary: MARSS is a regression-based method that mitigates an artifactual shared signal between simultaneously acquired slices in unprocessed MB fMRI.
 Project-URL: Homepage, https://github.com/CNaP-Lab/MARSS
 Project-URL: Issues, https://github.com/CNaP-Lab/MARSS/issues
@@ -74,7 +74,6 @@ Outputs in workingDir
 **za_.nii**: this NIFTI is the MARSS corrected timeseries. <br>
 **_slcart.nii**: this NIFTI is the timeseries of MARSS-estimated artifact signal that was subtracted from timeseriesFile to produce za*.nii <br>
 **_AVGslcart.nii**: this NIFTI is the mean absolute value across timepoints of slcart.nii (shown as a single 3D volume). <br>
-**MARSS_.png**: this is a summary diagnostic figure depicting pre- and post-MARSS slice correlation matrices, as well as orthogonal views of the artifact spatial distribution (from _AVGslcart.nii). <br>
 **corrMatrix\*.png**: slice correlation matrix of pre-MARSS data, along with the average difference in pearson correlation between simultaneously acquired slices and adjacent-to-simultaneous slices. <br>
 **corrMatrixza\*.png:** slice correlation matrix of MARSS-corrected data. <br>
 
