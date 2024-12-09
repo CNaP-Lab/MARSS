@@ -24,7 +24,10 @@ With the above specifications, the total time taken for MARSS to complete on a s
 # Usage
 MATLAB
 -------
-Prior to running MARSS, it must be added to the MATLAB path via the following command: `addpath(genpath(('/path/to/MARSS/'))`<br>
+Prior to running MARSS, it must be added to the MATLAB path via the following command: 
+```
+addpath(genpath(('/path/to/MARSS/'))
+```
 For more information, see the [MATLAB README](https://github.com/CNaP-Lab/MARSS/python). <br>
 
 Python

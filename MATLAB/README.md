@@ -24,7 +24,10 @@ Processor: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz <br>
 With the above specifications, the total time taken for MARSS to complete on a single fMRI timeseries of 563 volumes is approximately 10 minutes. 
 
 # Usage
-Prior to running MARSS, it must be added to the MATLAB path via the following command: `addpath(genpath(('/path/to/MARSS/'))`<br>
+Prior to running MARSS, it must be added to the MATLAB path via the following command: 
+```
+addpath(genpath(('/path/to/MARSS/'))
+```
 
 MARSS.m
 -------
