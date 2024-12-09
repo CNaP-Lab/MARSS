@@ -5,10 +5,7 @@ MARSS is a regression-based method that mitigates an artifactual shared signal b
 Software Authors: Philip N. Tubiolo, John C. Williams, Ashley Zhao, and Jared X. Van Snellenberg<br>
 
 Accompanies the following manuscript:<br>
-Philip N. Tubiolo, John C. Williams, and Jared X. Van Snellenberg.<br>
-Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br>
-bioRxiv [Preprint]. 2024 Apr 22:2023.12.25.573210. doi: 10.1101/2023.12.25.573210. PMID: 38234755; PMCID: PMC10793397.<br>
-https://doi.org/10.1101%2F2023.12.25.573210
+Tubiolo PN, Williams JC, Van Snellenberg JX.<br> Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br> Hum Brain Mapp. 2024 Nov;45(16):e70066. doi: 10.1002/hbm.70066. PMID: 39501896; PMCID: PMC11538719.<br>
 
 Software Requirements
 --------------
