@@ -1,19 +1,17 @@
 # Multiband Artifact Regression in Simultaneous Slices (MARSS)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)<br>
-This is a MATLAB pipeline developed for use in simultaneous multi-slice (multiband; MB) fMRI data.<br>
+This is a Python version of a MATLAB pipeline developed for use in simultaneous multi-slice (multiband; MB) fMRI data.<br>
 MARSS is a regression-based method that mitigates an artifactual shared signal between simultaneously acquired slices in unprocessed MB fMRI. <br>
-Software Authors: Philip N. Tubiolo, John C. Williams, Mahika Gupta, and Jared X. Van Snellenberg<br>
+Software Authors: Philip N. Tubiolo, John C. Williams, Ashley Zhao, and Jared X. Van Snellenberg<br>
 
 Accompanies the following manuscript:<br>
-Philip N. Tubiolo, John C. Williams, and Jared X. Van Snellenberg.<br>
-Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br>
-bioRxiv [Preprint]. 2024 Apr 22:2023.12.25.573210. doi: 10.1101/2023.12.25.573210. PMID: 38234755; PMCID: PMC10793397.<br>
-https://doi.org/10.1101%2F2023.12.25.573210
+Tubiolo PN, Williams JC, Van Snellenberg JX.<br> Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br> Hum Brain Mapp. 2024 Nov;45(16):e70066. doi: 10.1002/hbm.70066. PMID: 39501896; PMCID: PMC11538719.<br>
 
 Software Requirements
 --------------
-This software uses SPM12, which is included in this distribution. For more information, visit https://www.fil.ion.ucl.ac.uk/spm/software/spm12/ . <br>
-This software was developed on MATLAB R2023b and has been tested for compatibility on MATLAB R2021a. <br>
+<!-- This software uses SPM12, which is included in this distribution. For more information, visit https://www.fil.ion.ucl.ac.uk/spm/software/spm12/ . <br>
+This software was developed on MATLAB R2023b and has been tested for compatibility on MATLAB R2021a. <br> -->
+FSL must be installed and included in the system's PATH prior to use. For more information, visit https://fsl.fmrib.ox.ac.uk/fsl/docs/#/ <br>
 This software has been tested on the following operating systems, but should be compatible with MacOS as well: <br>
 Linux: Red Hat Enterprise Linux 7.9 <br>
 Windows: Windows 10 Home 64-bit <br>
@@ -27,35 +25,43 @@ Processor: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz <br>
 With the above specifications, the total time taken for MARSS to complete on a single fMRI timeseries of 563 volumes is approximately 10 minutes. 
 
 # Usage
-MARSS.m
+Installation
 -------
-MARSS.m is the main function of this pipeline, and the only function that must be directly run in order to perform MARSS on a single timeseries.
+To install this package, run the following command:
+
+```bash
+pip install MARSS
+```
+
+MARSS_main
+-------
+MARSS_main is the main function of this pipeline, and the only function that must be directly run in order to perform MARSS on a single timeseries.
 
 Syntax
 --------
-MARSS(timeseriesFile, MB, workingDir) performs MARSS artifact correction on a single unprocessed, MB fMRI timeseries. <br>
+MARSS_main(timeseriesFile, MB, workingDir,*args) performs MARSS artifact correction on a single unprocessed, MB fMRI timeseries. <br>
 
 Input Arguments
 --------------
 timeseriesFile (string): Full path to unprocessed, MB fMRI timeseries<br>
 MB (double): Multiband Acceleration Factor used during image acquisition<br>
-workingDir (string): Parent directory for all MARSS outputs. MARSS will create a separate folder within this folder named after timeseriesFile.
+workingDir (string): Parent directory for all MARSS outputs. MARSS will create a separate folder within this folder named after timeseriesFile.<br>
+*args (string): Optional argument specifying a path to motion parameters. 
 
 Outputs in workingDir
 --------------------
-**MARSS_SliceCorrelations.mat**: this .mat file contains a structure array with slice correlation information in pre- and post-MARSS data. This includes the slice correlation matrices, average correlation between simultaneously acquired slices, and average correlation between adjacent slices. <br>
+<!-- **MARSS_SliceCorrelations.mat**: this .mat file contains a structure array with slice correlation information in pre- and post-MARSS data. This includes the slice correlation matrices, average correlation between simultaneously acquired slices, and average correlation between adjacent slices. <br> -->
 **za_.nii**: this NIFTI is the MARSS corrected timeseries. <br>
 **_slcart.nii**: this NIFTI is the timeseries of MARSS-estimated artifact signal that was subtracted from timeseriesFile to produce za*.nii <br>
 **_AVGslcart.nii**: this NIFTI is the mean absolute value across timepoints of slcart.nii (shown as a single 3D volume). <br>
 **MARSS_.png**: this is a summary diagnostic figure depicting pre- and post-MARSS slice correlation matrices, as well as orthogonal views of the artifact spatial distribution (from _AVGslcart.nii). <br>
+**corrMatrix\*.png**: slice correlation matrix of pre-MARSS data, along with the average difference in pearson correlation between simultaneously acquired slices and adjacent-to-simultaneous slices. <br>
+**corrMatrixza\*.png:** slice correlation matrix of MARSS-corrected data. <br>
 
 Citation
 ---------
 When using MARSS, please cite the following:<br>
-Philip N. Tubiolo, John C. Williams, and Jared X. Van Snellenberg.<br>
-Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br>
-bioRxiv [Preprint]. 2024 Apr 22:2023.12.25.573210. doi: 10.1101/2023.12.25.573210. PMID: 38234755; PMCID: PMC10793397.<br>
-https://doi.org/10.1101%2F2023.12.25.573210
+Tubiolo PN, Williams JC, Van Snellenberg JX.<br> Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br> Hum Brain Mapp. 2024 Nov;45(16):e70066. doi: 10.1002/hbm.70066. PMID: 39501896; PMCID: PMC11538719.<br>
 
 License
 ----------
