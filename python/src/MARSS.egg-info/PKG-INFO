@@ -1,8 +1,7 @@
 Metadata-Version: 2.1
 Name: MARSS
-Version: 0.0.1
+Version: 0.0.3
 Summary: MARSS is a regression-based method that mitigates an artifactual shared signal between simultaneously acquired slices in unprocessed MB fMRI.
-Author-email: Example Author <author@example.com>, Example Author <author@example.com>, Second Author <second.author@example.com>, Third Author <third.author@example.com>
 Project-URL: Homepage, https://github.com/CNaP-Lab/MARSS
 Project-URL: Issues, https://github.com/CNaP-Lab/MARSS/issues
 Classifier: Programming Language :: Python :: 3
@@ -33,8 +32,7 @@ Tubiolo PN, Williams JC, Van Snellenberg JX.<br> Characterization and Mitigation
 
 Software Requirements
 --------------
-<!-- This software uses SPM12, which is included in this distribution. For more information, visit https://www.fil.ion.ucl.ac.uk/spm/software/spm12/ . <br>
-This software was developed on MATLAB R2023b and has been tested for compatibility on MATLAB R2021a. <br> -->
+FSL must be installed and included in the system's PATH prior to use. For more information, visit https://fsl.fmrib.ox.ac.uk/fsl/docs/#/ <br>
 This software has been tested on the following operating systems, but should be compatible with MacOS as well: <br>
 Linux: Red Hat Enterprise Linux 7.9 <br>
 Windows: Windows 10 Home 64-bit <br>
@@ -50,9 +48,9 @@ With the above specifications, the total time taken for MARSS to complete on a s
 # Usage
 Installation
 -------
-To install this package, run the following command:
+To install this [package](https://pypi.org/project/MARSS/), run the following command:
 
-```bash
+```
 pip install MARSS
 ```
 
@@ -73,7 +71,6 @@ workingDir (string): Parent directory for all MARSS outputs. MARSS will create a
 
 Outputs in workingDir
 --------------------
-<!-- **MARSS_SliceCorrelations.mat**: this .mat file contains a structure array with slice correlation information in pre- and post-MARSS data. This includes the slice correlation matrices, average correlation between simultaneously acquired slices, and average correlation between adjacent slices. <br> -->
 **za_.nii**: this NIFTI is the MARSS corrected timeseries. <br>
 **_slcart.nii**: this NIFTI is the timeseries of MARSS-estimated artifact signal that was subtracted from timeseriesFile to produce za*.nii <br>
 **_AVGslcart.nii**: this NIFTI is the mean absolute value across timepoints of slcart.nii (shown as a single 3D volume). <br>
