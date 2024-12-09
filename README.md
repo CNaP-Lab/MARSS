@@ -28,7 +28,7 @@ Prior to running MARSS, it must be added to the MATLAB path via the following co
 ```
 addpath(genpath(('/path/to/MARSS/'))
 ```
-For more information, see the [MATLAB README](https://github.com/CNaP-Lab/MARSS/tree/main/matlab). <br>
+For more information, see the [MATLAB README](https://github.com/CNaP-Lab/MARSS/tree/main/MATLAB). <br>
 
 Python
 -------
