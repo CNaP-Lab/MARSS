@@ -1,15 +1,14 @@
-# pip install setuptools
 from setuptools import setup
 
 setup(
-    name='MARSS120224',
+    name='MARSS',
     # version='0.1.0',    
     # description='An example Python package',
     # url='https://github.com/shuds13/pyexample',
     # author='Stephen Hudson',
     # author_email='shudson@anl.gov',
     # license='BSD 2-clause',
-    packages=['MARSS120224'],
+    packages=['MARSS'],
     install_requires=[
         'mpi4py>=2.0',
         'numpy',
