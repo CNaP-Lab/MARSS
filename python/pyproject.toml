@@ -1,0 +1,28 @@
+[project]
+name = "MARSS"
+version = "0.0.4"
+description = "MARSS is a regression-based method that mitigates an artifactual shared signal between simultaneously acquired slices in unprocessed MB fMRI."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'numpy',
+    'nibabel',
+    'pandas',
+    'matplotlib',
+    'scipy',
+    'networkx',
+    'traits',
+    'python-dateutil',
+    'traitsui',
+    'nipype[all]',
+    'seaborn',
+]
+
+[project.urls]
+Homepage = "https://github.com/CNaP-Lab/MARSS"
+Issues = "https://github.com/CNaP-Lab/MARSS/issues"
