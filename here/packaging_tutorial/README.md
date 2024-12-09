@@ -32,7 +32,7 @@ Installation
 To install this package, run the following command:
 
 ```bash
-pip install <package-name>
+pip install MARSS
 ```
 
 MARSS_main
@@ -57,14 +57,13 @@ Outputs in workingDir
 **_slcart.nii**: this NIFTI is the timeseries of MARSS-estimated artifact signal that was subtracted from timeseriesFile to produce za*.nii <br>
 **_AVGslcart.nii**: this NIFTI is the mean absolute value across timepoints of slcart.nii (shown as a single 3D volume). <br>
 **MARSS_.png**: this is a summary diagnostic figure depicting pre- and post-MARSS slice correlation matrices, as well as orthogonal views of the artifact spatial distribution (from _AVGslcart.nii). <br>
+**corrMatrix\*.png**: slice correlation matrix of pre-MARSS data, along with the average difference in pearson correlation between simultaneously acquired slices and adjacent-to-simultaneous slices. <br>
+**corrMatrixza\*.png:** slice correlation matrix of MARSS-corrected data. <br>
 
 Citation
 ---------
 When using MARSS, please cite the following:<br>
-Philip N. Tubiolo, John C. Williams, and Jared X. Van Snellenberg.<br>
-Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br>
-bioRxiv [Preprint]. 2024 Apr 22:2023.12.25.573210. doi: 10.1101/2023.12.25.573210. PMID: 38234755; PMCID: PMC10793397.<br>
-https://doi.org/10.1101%2F2023.12.25.573210
+Tubiolo PN, Williams JC, Van Snellenberg JX.<br> Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br> Hum Brain Mapp. 2024 Nov;45(16):e70066. doi: 10.1002/hbm.70066. PMID: 39501896; PMCID: PMC11538719.<br>
 
 License
 ----------
