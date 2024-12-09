@@ -28,7 +28,7 @@ Prior to running MARSS, it must be added to the MATLAB path via the following co
 ```
 addpath(genpath(('/path/to/MARSS/'))
 ```
-For more information, see the [MATLAB README](https://github.com/CNaP-Lab/MARSS/python). <br>
+For more information, see the [MATLAB README](https://github.com/CNaP-Lab/MARSS/tree/main/matlab). <br>
 
 Python
 -------
@@ -37,7 +37,7 @@ To install this [package](https://pypi.org/project/MARSS/), run the following co
 ```
 pip install MARSS
 ```
-For more information, see the [Python README](https://github.com/CNaP-Lab/MARSS/MATLAB). <br>
+For more information, see the [Python README](https://github.com/CNaP-Lab/MARSS/tree/main/python). <br>
 
 Citation
 ---------
