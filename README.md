@@ -2,7 +2,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)<br>
 This is a Python and MATLAB pipeline developed for use in simultaneous multi-slice (multiband; MB) fMRI data.<br>
 MARSS is a regression-based method that mitigates an artifactual shared signal between simultaneously acquired slices in unprocessed MB fMRI. <br>
-Software Authors: Philip N. Tubiolo, John C. Williams, Ashley Zhao, and Jared X. Van Snellenberg<br>
+Software Authors: Philip N. Tubiolo, John C. Williams, Ashley Zhao, Mahika Gupta, and Jared X. Van Snellenberg<br>
 
 Accompanies the following manuscript:<br>
 Tubiolo PN, Williams JC, Van Snellenberg JX.<br> Characterization and Mitigation of a Simultaneous Multi-Slice fMRI Artifact: Multiband Artifact Regression in Simultaneous Slices.<br> Hum Brain Mapp. 2024 Nov;45(16):e70066. doi: 10.1002/hbm.70066. PMID: 39501896; PMCID: PMC11538719.<br>
@@ -22,6 +22,11 @@ Processor: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz <br>
 With the above specifications, the total time taken for MARSS to complete on a single fMRI timeseries of 563 volumes is approximately 10 minutes. 
 
 # Usage
+MATLAB
+-------
+Prior to running MARSS, it must be added to the MATLAB path via the following command: `addpath(genpath(('/path/to/MARSS/'))`<br>
+For more information, see the [MATLAB README](https://github.com/CNaP-Lab/MARSS/python). <br>
+
 Python
 -------
 To install this [package](https://pypi.org/project/MARSS/), run the following command:
@@ -29,13 +34,7 @@ To install this [package](https://pypi.org/project/MARSS/), run the following co
 ```
 pip install MARSS
 ```
-<br>
-For more information, see the [Python README](). <br>
-
-MATLAB
--------
-Prior to running MARSS, it must be added to the MATLAB path via the following command: `addpath(genpath(('/path/to/MARSS/'))`<br>
-For more information, see the [MATLAB README](). <br>
+For more information, see the [Python README](https://github.com/CNaP-Lab/MARSS/MATLAB). <br>
 
 Citation
 ---------
