@@ -11,6 +11,7 @@ Software Requirements
 --------------
 <!-- This software uses SPM12, which is included in this distribution. For more information, visit https://www.fil.ion.ucl.ac.uk/spm/software/spm12/ . <br>
 This software was developed on MATLAB R2023b and has been tested for compatibility on MATLAB R2021a. <br> -->
+FSL must be installed and included in the system's PATH prior to use. For more information, visit https://fsl.fmrib.ox.ac.uk/fsl/docs/#/ <br>
 This software has been tested on the following operating systems, but should be compatible with MacOS as well: <br>
 Linux: Red Hat Enterprise Linux 7.9 <br>
 Windows: Windows 10 Home 64-bit <br>
