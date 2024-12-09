@@ -1,0 +1,11 @@
+numpy
+nibabel
+pandas
+matplotlib
+scipy
+networkx
+traits
+python-dateutil
+traitsui
+nipype[all]
+seaborn

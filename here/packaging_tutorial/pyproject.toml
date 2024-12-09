@@ -1,10 +1,13 @@
 [project]
-name = "MARSS315112524"
+name = "MARSS120824"
 version = "0.0.1"
 authors = [
   { name="Example Author", email="author@example.com" },
+  { name="Example Author", email="author@example.com" },
+  { name="Second Author", email="second.author@example.com" },
+  { name="Third Author", email="third.author@example.com" },
 ]
-description = "A small example package"
+description = "MARSS is a regression-based method that mitigates an artifactual shared signal between simultaneously acquired slices in unprocessed MB fMRI."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -15,19 +18,17 @@ classifiers = [
 dependencies = [
     'numpy',
     'nibabel',
-    'shutil', 
     'pandas',
     'matplotlib',
     'scipy',
     'networkx',
     'traits',
     'python-dateutil',
-    'Sphinx',
     'traitsui',
     'nipype[all]',
     'seaborn',
 ]
 
 [project.urls]
-Homepage = "https://github.com/pypa/sampleproject"
-Issues = "https://github.com/pypa/sampleproject/issues"
+Homepage = "https://github.com/CNaP-Lab/MARSS"
+Issues = "https://github.com/CNaP-Lab/MARSS/issues"
