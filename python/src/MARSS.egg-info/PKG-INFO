@@ -1,14 +1,15 @@
 Metadata-Version: 2.1
 Name: MARSS
-Version: 0.0.4
+Version: 1.0.0
 Summary: MARSS is a regression-based method that mitigates an artifactual shared signal between simultaneously acquired slices in unprocessed MB fMRI.
 Project-URL: Homepage, https://github.com/CNaP-Lab/MARSS
 Project-URL: Issues, https://github.com/CNaP-Lab/MARSS/issues
 Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: numpy
 Requires-Dist: nibabel
 Requires-Dist: pandas
