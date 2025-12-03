@@ -102,7 +102,7 @@ def MARSS_main(timeseriesFile, MB, workingDir,*args):
     
     print('Generating post-MARSS Motion Parameters and Slice Correlations...')
     postMARSS_MPpath = MARSS_getMPs(postMARSS_fname, MB, runDir)
-    matrix = text_to_matrix(preMARSS_MPpath)
+    matrix = text_to_matrix(postMARSS_MPpath)
     MARSS_mbCorrPlot(postMARSS_fname, matrix, MB,runDir)   
 
 def text_to_matrix(file_path):
